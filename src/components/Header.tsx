@@ -29,7 +29,7 @@ const Header: React.FC = () => {
           />
         </div>
 
-        <p className="text-black text-xl mr-4 font-semibold leading-tight">
+        <p className="text-black text-xl md:mr-4 font-semibold leading-tight">
           <span>Welcome, </span>
           <br />
           Name
@@ -39,14 +39,14 @@ const Header: React.FC = () => {
       <div className="py-3 md:hidden"></div>
 
       <SearchBar
-        className="rounded-2xl w-1/2 md:hidden"
+        className="rounded-2xl w-full xxs:w-1/2 md:hidden"
         watermark="search by artwork, artist name ..."
       />
 
       <div className="py-4 md:py-2"></div>
 
       <div className="max-w-3xl mx-auto">
-        <div className="flex flex-row justify-between">
+        <div className="flex flex-row justify-between flex-wrap gap-1">
           {navbar.map((nav) => (
             <SelectButton
               key={nav.id}
@@ -57,7 +57,7 @@ const Header: React.FC = () => {
           ))}
         </div>
 
-        <div className="flex flex-row justify-around py-4">
+        <div className="flex flex-row justify-around py-4 flex-wrap gap-1">
           {getSelectedOptions(navbar)?.options.map((option) => (
             <p className="text-black/60 text-xs" key={option.id}>
               {option.title}
