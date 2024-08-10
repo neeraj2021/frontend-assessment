@@ -1,4 +1,4 @@
-import { FrameComponentProps } from "../constants/explore";
+import { FrameComponentProps } from "../model";
 import SelectButton from "./SelectButton";
 
 const FrameComponent = (props: FrameComponentProps) => {
