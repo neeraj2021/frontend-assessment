@@ -1,8 +1,6 @@
 import searchLine from "../assets/claritysearchline.svg";
 import { SearchBarProps } from "../model";
 
-
-
 const SearchBar = (props: SearchBarProps) => {
   return (
     <div

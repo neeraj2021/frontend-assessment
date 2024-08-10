@@ -1,3 +1,19 @@
+export enum Designation {
+  Painting = "Painting",
+  Drawing = "Drawing",
+  Video = "Video",
+  Sculpture = "Sculpture",
+}
+
+export interface FrameComponentProps {
+  id: number;
+  name: string;
+  year: number;
+  imageSrc: string;
+  designation: Designation;
+  dotColor?: string;
+}
+
 export interface Navbar {
   id: number;
   title: string;

@@ -1,18 +1,18 @@
 import React from "react";
 import SendAMessage from "../assets/send-a-message.svg";
 import { navbar } from "../constants/navbar";
+import { Navbar } from "../model";
 import SearchBar from "./SearchBar";
 import SelectButton from "./SelectButton";
-import { Navbar } from "../model";
 
-function getSelectedOptions(options: Navbar[]) {
+const getSelectedOptions = (options: Navbar[]) => {
   return options.find((option) => option.isSelect);
-}
+};
 
-const Header = () => {
+const Header: React.FC = () => {
   return (
-    <React.Fragment>
-      <div className="w-full flex flex-row justify-between items-center ">
+    <>
+      <div className="w-full flex flex-row justify-between items-center">
         <div>
           <img
             className="w-[1.563rem] h-[1.563rem]"
@@ -47,29 +47,25 @@ const Header = () => {
 
       <div className="max-w-3xl mx-auto">
         <div className="flex flex-row justify-between">
-          {navbar.map((nav) => {
-            return (
-              <SelectButton
-                key={nav.id}
-                title={nav.title}
-                type={nav.isSelect ? "filled" : "outlined"}
-                className="rounded-[0.6rem] py-1"
-              />
-            );
-          })}
+          {navbar.map((nav) => (
+            <SelectButton
+              key={nav.id}
+              title={nav.title}
+              type={nav.isSelect ? "filled" : "outlined"}
+              className="rounded-[0.6rem] py-1"
+            />
+          ))}
         </div>
 
         <div className="flex flex-row justify-around py-4">
-          {getSelectedOptions(navbar)?.options.map((option) => {
-            return (
-              <p className="text-black/60 text-xs" key={option.id}>
-                {option.title}
-              </p>
-            );
-          })}
+          {getSelectedOptions(navbar)?.options.map((option) => (
+            <p className="text-black/60 text-xs" key={option.id}>
+              {option.title}
+            </p>
+          ))}
         </div>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 

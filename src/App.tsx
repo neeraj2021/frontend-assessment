@@ -1,8 +1,9 @@
+import React from "react";
 import FrameComponent from "./components/FrameComponent";
 import Header from "./components/Header";
 import { explore } from "./constants/explore";
 
-const App = () => {
+const App: React.FC = () => {
   return (
     <div className="mx-auto container px-6 py-4 max-w-5xl">
       <Header />
