@@ -1,8 +1,5 @@
-interface SelectButtonProps {
-  title: string;
-  type?: "filled" | "outlined";
-  className?: string;
-}
+import { SelectButtonProps } from "../model";
+
 
 const SelectButton = (props: SelectButtonProps) => {
   return (

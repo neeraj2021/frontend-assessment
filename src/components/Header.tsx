@@ -1,8 +1,9 @@
 import React from "react";
 import SendAMessage from "../assets/send-a-message.svg";
-import { navbar, Navbar } from "../constants/navbar";
+import { navbar } from "../constants/navbar";
 import SearchBar from "./SearchBar";
 import SelectButton from "./SelectButton";
+import { Navbar } from "../model";
 
 function getSelectedOptions(options: Navbar[]) {
   return options.find((option) => option.isSelect);

@@ -1,9 +1,7 @@
 import searchLine from "../assets/claritysearchline.svg";
+import { SearchBarProps } from "../model";
 
-interface SearchBarProps {
-  watermark: string;
-  className?: string;
-}
+
 
 const SearchBar = (props: SearchBarProps) => {
   return (

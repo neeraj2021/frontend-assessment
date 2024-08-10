@@ -1,14 +1,4 @@
-export interface Navbar {
-  id: number;
-  title: string;
-  isSelect: boolean;
-  options: NavbarOption[];
-}
-
-export interface NavbarOption {
-  id: number;
-  title: string;
-}
+import { Navbar } from "../model";
 
 export const navbar: Navbar[] = [
   {
